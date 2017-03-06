@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params) # not the final implemenation!
   	if @user.save
   		# Handle a successful save.
+      log_in @user
   		flash[:success] = "Welcome to the Twitter Clone!"
   		redirect_to @user
   	else
