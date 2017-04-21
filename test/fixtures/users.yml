@@ -4,25 +4,41 @@ mark:
   email: mark@example.com
   password_digest: <%= User.digest('password') %> 
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 anny:
   name: Anny Example
   email: anny@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
+non:
+  name: Non Activated
+  email: nonactivated@example.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
+  
 trent:
   name: Trent Trustworthy
   email: trent@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 mallory:
   name: Mallory Malicious
   email: mallory@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name: <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
