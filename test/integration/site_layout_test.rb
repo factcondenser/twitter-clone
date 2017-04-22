@@ -20,5 +20,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     log_in_as(users(:mark))
     follow_redirect! # why is this necessary?
     assert_select "a[href=?]", users_path
+    get root_path
+    assert_select "a[href=?]", signup_path, count: 0 # Don't show signup button to active users.
 	end
 end
