@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 	# Attributes
+	has_many :microposts, dependent: :destroy # Assoicate user with his/her microposts and arrange for dependent microposts to be destroyed when corresponding users are destroyed.
 	attr_accessor	:remember_token, :activation_token, :reset_token # As required by the virtual nature of these tokens (ie they're not in the db)
 	before_save		:downcase_email
 	before_create	:create_activation_digest

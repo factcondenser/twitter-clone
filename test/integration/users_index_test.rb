@@ -22,6 +22,9 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
 			end
 		end
 		assert_difference 'User.count', -1 do
+			# Why not write @non_admin.destroy?
+			# What's the difference here?
+			# Is one more syntactically correct than the other?
 			delete user_path(@non_admin)
 		end
 	end

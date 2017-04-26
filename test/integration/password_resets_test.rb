@@ -46,7 +46,7 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
 	# Vailid password & confirmation
 	patch password_reset_path(user.reset_token), params: { email: user.email, user: { password: "foobaz", password_confirmation: "foobaz" } }
 	assert is_logged_in?
-	assert_equal nil, user.reload.reset_digest # Don't forget to reload the user, since the update action makes a change to the db!
+	assert_nil user.reload.reset_digest # Don't forget to reload the user, since the update action makes a change to the db!
 	assert_not flash.empty?
 	assert_redirected_to user
   end

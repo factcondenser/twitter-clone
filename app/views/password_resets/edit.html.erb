@@ -4,7 +4,7 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
 		<%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
-			<%= render 'shared/error_messages' %>
+			<%= render 'shared/error_messages', object: f.object %>
 
 			<!--Use hidden_field_tag helper instead of f.hidden_field because former places @user.email in params[:email] whereas latter places it in params[:user][:email] -->
 			<%= hidden_field_tag :email, @user.email %>
