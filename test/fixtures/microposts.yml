@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+burger:
+  content: "我剛才吃了雞腿堡"
+  created_at: <%= 10.minutes.ago %>
+  user: anny
+
+tau_manifesto:
+  content: "Check out the @tauday site by @mhartl: http//tauday.com"
+  created_at: <%= 3.years.ago %>
+  user: anny
+
+panda_video:
+  content: "Chubby pandas chubbin around: https://www.youtube.com/watch?v=UkaHbkBZqcM"
+  created_at: <%= 2.hours.ago %>
+  user: anny
+
+# "magic" columns automatically updated by Rails (i.e. created_at) are ordinarily not set-able, but it's possible in fixtures. Setting this may not be necessary b/c in many systems fixtures are created in order, but it would be foolish to rely on this feature.
+most_recent:
+  content: "Writing a short test"
+  created_at: <%= Time.zone.now %>
+  user: anny
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%=  Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: anny
+<% end %>
