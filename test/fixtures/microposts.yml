@@ -1,29 +1,50 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-burger:
-  content: "我剛才吃了雞腿堡"
+escape:
+  content: <%= CGI.escape("Gotta remember to escape apostrophes in my fixtures so that I don't get a failed test.") %>
   created_at: <%= 10.minutes.ago %>
-  user: anny
+  user: mark
 
 tau_manifesto:
   content: "Check out the @tauday site by @mhartl: http//tauday.com"
   created_at: <%= 3.years.ago %>
-  user: anny
+  user: mark
 
 panda_video:
   content: "Chubby pandas chubbin around: https://www.youtube.com/watch?v=UkaHbkBZqcM"
   created_at: <%= 2.hours.ago %>
-  user: anny
+  user: mark
 
 # "magic" columns automatically updated by Rails (i.e. created_at) are ordinarily not set-able, but it's possible in fixtures. Setting this may not be necessary b/c in many systems fixtures are created in order, but it would be foolish to rely on this feature.
 most_recent:
   content: "Writing a short test"
   created_at: <%= Time.zone.now %>
-  user: anny
+  user: mark
 
 <% 30.times do |n| %>
 micropost_<%= n %>:
   content: <%=  Faker::Lorem.sentence(5) %>
   created_at: <%= 42.days.ago %>
-  user: anny
+  user: mark
 <% end %>
+
+burger:
+  content: "我剛才吃了雞腿堡"
+  created_at: <%= 2.years.ago %>
+  user: anny
+
+sexy:
+  content: "This guy has nothing to do with sexy."
+  created_at: <%= 3.days.ago %>
+  user: anny
+
+dance:
+  content: "菠蘿包 in the pocket, 雞腿包 in the pocket, all our love in the pocket, sweaty sweaty love!" 
+  created_at: <%= 10.minutes.ago %>
+  user: pikachu
+
+hungry:
+  content: "I'm hungry, Marky. Feed me!"
+  created_at: <%= 4.hours.ago %>
+  user: pikachu
+

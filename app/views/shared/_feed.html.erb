@@ -1,0 +1,7 @@
+<% if @feed_items.any? %>
+	<ol class="microposts">
+		<!--Defer rendering to _micropost.html.erb. Rails knows to call _micropost.html.erb bc each element of @feed_items has class Micropost -->
+		<%= render @feed_items %>
+	</ol>
+	<%= will_paginate @feed_items %>
+<% end %>

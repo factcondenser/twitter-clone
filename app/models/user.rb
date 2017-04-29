@@ -77,6 +77,16 @@ class User < ApplicationRecord
 		reset_sent_at < 2.hours.ago
 	end
 	
+	# Defines a proto-feed.
+	# See "Following users" for the full implementation.
+	def feed
+		# Use the ? to ensure that id is properly escaped before being included in underlying SQL query.
+		# Thus, avoid serious security hole called SQL injection.
+		# id here is just an integer (i.e. self.id), so no harm.
+		# But always escaping variables injected into SQL statements is a good habit.
+		Micropost.where("user_id = ?", id)
+	end
+
 	private
 
 		# Converts email to all lower-case.

@@ -20,9 +20,9 @@ non:
   password_digest: <%= User.digest('password') %>
   activated: false
   
-trent:
-  name: Trent Trustworthy
-  email: trent@example.com
+pikachu:
+  name: Pikachu Example
+  email: pikachu@example.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
