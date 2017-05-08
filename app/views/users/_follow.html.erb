@@ -1,0 +1,4 @@
+<%= form_for(current_user.active_relationships.build, remote: true) do |f| %> <!--remote: true automagically gets Rails to use Ajax.-->
+	<div><%= hidden_field_tag :followed_id, @user.id %></div> <!--remote: true automagically gets Rails to use Ajax. Using a simple HTML property instead of inserting the full JS code, Rails follows philosophy of 'unobtrusive JS'.-->
+	<%= f.submit "Follow", class: "btn btn-primary" %>
+<% end %>

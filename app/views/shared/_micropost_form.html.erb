@@ -5,7 +5,7 @@
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
-  	<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+    <%= f.file_field :picture, class:'filestyle', 'accept' => "image/jpeg,image/gif,image/png", 'data-buttonBefore' => true, 'data-icon' => false, 'data-classButton' => 'btn btn-primary', 'data-buttonText' => 'Upload image' %>
   </span>
 <% end %>
 
@@ -17,4 +17,9 @@
 			alert('Maximum file size is 5MB. Please choose a smaller file.');
 		}
 	});
+</script>
+
+<script type="text/javascript" src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"> 
+  $(":file").filestyle({
+  })
 </script>

@@ -1,0 +1,15 @@
+<% @user ||= current_user %> <!--Does nothing when @user is not nil (as on a profile page), but when it is nil (as on the Home page) it sets @user to the current user -->
+<div class="stats">
+	<a href="<%= following_user_path(@user) %>">
+		<strong id="following" class="stat"> <!--id is useful here for Ajax implementation, which accesses elements on the page using their unique ids.-->
+			<%= @user.following.count %> <!--Similar to @user.microposts.count; Rails calculates the count directly in the database for efficiency.-->
+		</strong>
+		following
+	</a>
+	<a href="<%= followers_user_path(@user) %>">
+		<strong id="followers" class="stat">
+			<%= @user.followers.count %>
+		</strong>
+		followers
+	</a>
+</div>

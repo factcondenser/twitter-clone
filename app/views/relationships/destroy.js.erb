@@ -1,0 +1,8 @@
+// The jQuery .html method updates the HTML inside the relevant element with the contents of its argument.
+// The Ruby escape_javascript method is needed to escape out the result when inserting HTML in a JS file;
+// otherwise, the inserted HTML could break the JavaScript.
+$("#follow_form").html("<%= escape_javascript(render('users/follow')) %>");
+$("#followers").html('<%= @user.followers.count %>');
+// Note the line-ending semicolons, which are characteristic of languages with 
+// syntax descended from ALGOL (Algorithmic Language). ALGOL was arguably most
+//influential of four roughly contemporary languages: ALGOL, FORTRAN, Lisp, & COBOL.
