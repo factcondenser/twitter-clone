@@ -20,7 +20,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
  	@user.microposts.paginate(page: 1).each do |micropost|
  		# RAILS AUTOMATICALLY ESCAPES ANY CONTENT INSERTED INTO VIEW TEMPLATES
  		# TO PREVENT CROSS-SITE SCRIPTING (XSS) ATTACKS!
- 		assert_match micropost.content, response.body
+ 		assert_match CGI.escapeHTML(micropost.content), response.body
  	end
  end
 end
