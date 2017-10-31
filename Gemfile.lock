@@ -41,7 +41,7 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (7.1.4)
-    autoprefixer-rails (6.7.7.2)
+    autoprefixer-rails (7.1.0)
       execjs
     bcrypt (3.1.11)
     bootstrap-filestyle-rails (1.2.1)
@@ -67,7 +67,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    debug_inspector (0.0.2)
+    debug_inspector (0.0.3)
     erubis (2.7.0)
     excon (0.55.0)
     execjs (2.7.0)
@@ -192,7 +192,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (1.9.1)
+    fog-vsphere (1.9.2)
       fog-core
       rbvmomi (~> 1.9)
     fog-xenserver (0.3.0)
@@ -233,7 +233,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    lumberjack (1.0.11)
+    lumberjack (1.0.12)
     mail (2.6.5)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
@@ -243,7 +243,7 @@ GEM
     mimemagic (0.3.2)
     mini_magick (4.5.1)
     mini_portile2 (2.1.0)
-    minitest (5.10.1)
+    minitest (5.10.2)
     minitest-reporters (1.1.9)
       ansi
       builder
@@ -252,7 +252,7 @@ GEM
     multi_json (1.12.1)
     nenv (0.3.0)
     nio4r (1.2.1)
-    nokogiri (1.7.1)
+    nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
     notiffany (0.1.1)
       nenv (~> 0.1)
@@ -263,7 +263,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     puma (3.4.0)
-    rack (2.0.1)
+    rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.1)
@@ -282,9 +282,9 @@ GEM
       actionpack (~> 5.x)
       actionview (~> 5.x)
       activesupport (~> 5.x)
-    rails-dom-testing (2.0.2)
-      activesupport (>= 4.2.0, < 6.0)
-      nokogiri (~> 1.6)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -335,7 +335,7 @@ GEM
     trollop (2.1.2)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
-    turbolinks-source (5.0.1)
+    turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -386,4 +386,4 @@ DEPENDENCIES
   will_paginate (= 3.1.0)
 
 BUNDLED WITH
-   1.14.2
+   1.14.6
